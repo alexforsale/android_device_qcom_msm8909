@@ -33,18 +33,18 @@ endif
 #----------------------------------------------------------------------
 # Compile Linux Kernel
 #----------------------------------------------------------------------
-#ifeq ($(KERNEL_DEFCONFIG),)
-#    ifeq ($(TARGET_BUILD_VARIANT),user)
-#      KERNEL_DEFCONFIG := msm8909-1gb-perf_defconfig
-#    else
-#      KERNEL_DEFCONFIG := msm8909-1gb_defconfig
-#    endif
-#endif
-#
+ifeq ($(KERNEL_DEFCONFIG),)
+    ifeq ($(TARGET_BUILD_VARIANT),user)
+      KERNEL_DEFCONFIG := msm8909-1gb-perf_defconfig
+    else
+      KERNEL_DEFCONFIG := msm8909-1gb_defconfig
+    endif
+endif
+
 include kernel/msm/msm-3.10/AndroidKernel.mk
-#
-#$(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
-#	$(transform-prebuilt-to-target)
+
+$(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
+	$(transform-prebuilt-to-target)
 
 #----------------------------------------------------------------------
 # Copy additional target-specific files
