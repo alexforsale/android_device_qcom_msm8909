@@ -11,4 +11,8 @@
 #LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/wifi
 #include $(BUILD_PREBUILT)
 
-#include $(call all-makefiles-under,$(LOCAL_PATH))
+ifeq ($(TARGET_BOARD_PLATFORM),msm8909)
+
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
+endif

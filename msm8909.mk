@@ -5,7 +5,7 @@ ifeq ($(TARGET_PRODUCT),msm8909)
 TARGET_USES_QCA_NFC := true
 endif
 ifeq ($(TARGET_USES_QCOM_BSP), true)
-# Add QC Video Enhancements flag
+ Add QC Video Enhancements flag
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 endif #TARGET_USES_QCOM_BSP
 
@@ -19,7 +19,7 @@ PRODUCT_COPY_FILES += device/qcom/msm8909/media/media_profiles_8909.xml:system/e
                       device/qcom/msm8909/media/media_codecs_8909.xml:system/etc/media_codecs.xml
 endif
 
-$(call inherit-product, device/qcom/common/common.mk)
+$(call inherit-product-if-exist, device/qcom/common/common.mk)
 
 PRODUCT_NAME := msm8909
 PRODUCT_DEVICE := msm8909
@@ -89,13 +89,13 @@ PRODUCT_COPY_FILES += \
 # line has to be in sync with build/target/product/core_base.mk
 endif # TARGET_USES_QCA_NFC
 
-PRODUCT_BOOT_JARS += qcmediaplayer \
-                     WfdCommon \
-                     oem-services \
-                     qcom.fmradio \
-                     org.codeaurora.Performance \
-                     vcard \
-                     tcmiface
+#PRODUCT_BOOT_JARS += qcmediaplayer \
+#                     WfdCommon \
+#                     oem-services \
+#                     qcom.fmradio \
+#                     org.codeaurora.Performance \
+#                     vcard \
+#                     tcmiface
 
 # Listen configuration file
 PRODUCT_COPY_FILES += \

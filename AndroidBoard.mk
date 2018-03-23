@@ -41,7 +41,7 @@ ifeq ($(KERNEL_DEFCONFIG),)
     endif
 endif
 
-include kernel/AndroidKernel.mk
+include kernel/msm/msm-3.10/AndroidKernel.mk
 
 $(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
@@ -181,17 +181,17 @@ endif
 #----------------------------------------------------------------------
 # Radio image
 #----------------------------------------------------------------------
-ifeq ($(ADD_RADIO_FILES), true)
-radio_dir := $(LOCAL_PATH)/radio
-RADIO_FILES := $(shell cd $(radio_dir) ; ls)
-$(foreach f, $(RADIO_FILES), \
-    $(call add-radio-file,radio/$(f)))
-endif
+#ifeq ($(ADD_RADIO_FILES), true)
+#radio_dir := $(LOCAL_PATH)/radio
+#RADIO_FILES := $(shell cd $(radio_dir) ; ls)
+#$(foreach f, $(RADIO_FILES), \
+#    $(call add-radio-file,radio/$(f)))
+#endif
 
 #----------------------------------------------------------------------
 # extra images
 #----------------------------------------------------------------------
-include device/qcom/common/generate_extra_images.mk
+# include device/qcom/common/generate_extra_images.mk
 
 #----------------------------------------------------------------------
 # pick up additional files for Tiny Android builds

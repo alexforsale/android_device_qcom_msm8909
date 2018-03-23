@@ -34,18 +34,18 @@
    phone object irrespective of this config -->
    <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
    <!-- Whether cpu boost is enabled for overscroller fling. -->
-   <bool name="config_enableCpuBoostForOverScrollerFling">true</bool>
+   <!--bool name="config_enableCpuBoostForOverScrollerFling">true</bool-->
    <!-- Configuartion to support 7bit Ascii encoding and decoding
    for long messages. -->
    <bool name="config_ascii_7bit_support_for_long_message">true</bool>
-   <integer name="flingboost_cpuboost_param">0x20B</integer>
-   <integer name="flingboost_preferidle_param">0x3E01</integer>
+   <!--integer name="flingboost_cpuboost_param">0x20B</integer>
+   <integer name="flingboost_preferidle_param">0x3E01</integer-->
    <!-- Whether cpu boost is enabled for horizontal scroll. -->
-   <bool name="config_enableCpuBoostForScroller">true</bool>
+   <!--bool name="config_enableCpuBoostForScroller">true</bool>
    <integer name="scrollboost_cpuboost_param">0x20B</integer>
-   <integer name="scrollboost_preferidle_param">0x3E01</integer>
+   <integer name="scrollboost_preferidle_param">0x3E01</integer-->
    <!-- Whether cpu boost is enabled for application's 1st launch. -->
-   <bool name="config_enableCpuBoostForAppLaunch">true</bool>
+   <!--bool name="config_enableCpuBoostForAppLaunch">true</bool>
    <integer name="disablepacking_timeout_param">5000</integer>
    <integer name="launchboost_timeout_param">2000</integer>
    <integer name="launchboost_cpuboost_param">0x20B</integer>
@@ -55,19 +55,19 @@
    <integer name="launchboost_idleloadboost_param">0x4101</integer>
    <integer name="launchboost_idlenrrunboost_param">0x4201</integer>
    <integer name="launchboost_preferidle_param">0x3E01</integer>
-   <integer name="launchboost_cpunumboost_param">0x704</integer>
+   <integer name="launchboost_cpunumboost_param">0x704</integer-->
    <!-- Whether cpu boost is enabled for animation during exit and entry -->
-   <bool name="config_enablePerfBoostForAnimation">true</bool>
+   <!--bool name="config_enablePerfBoostForAnimation">true</bool>
    <integer name="animationboost_cpuboost_param">0x20B</integer>
-   <integer name="animationboost_timeout_param">600</integer>
+   <integer name="animationboost_timeout_param">600</integer-->
 
    <!-- Activity scroll boost params -->
-   <integer name="ascrollboost_timeout">17</integer>
+   <!--integer name="ascrollboost_timeout">17</integer>
    <integer name="ascrollboost_cpuboost">0x20B</integer>
-   <integer name="ascrollboost_pcdisbl">0x101</integer>
+   <integer name="ascrollboost_pcdisbl">0x101</integer-->
 
    <!-- Enable button light -->
-   <bool name="config_button_light_enabled">true</bool>
+   <!--bool name="config_button_light_enabled">true</bool-->
    <!--
    Indicate whether to allow the device to suspend when the screen is off
    due to the proximity sensor.  This resource should only be set to true
